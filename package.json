@@ -1,0 +1,24 @@
+{
+  "name": "snowday",
+  "version": "1.0.0",
+  "description": "Application for viewing weather forecasts and conditions at ski areas",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --mode development -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camboucher/snowDay.git"
+  },
+  "author": "Cam Boucher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camboucher/snowDay/issues"
+  },
+  "homepage": "https://github.com/camboucher/snowDay#readme",
+  "devDependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
