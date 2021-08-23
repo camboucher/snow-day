@@ -15,15 +15,18 @@ function GoogleMapsComponent(props) {
   }
 
   return (
-    <div>Replace this with commented out text later. Placeholder to save API calls</div>
-    //  <LoadScript
+    <>
+      <div>Replace this with commented out text later. Placeholder to save API calls</div>
+    {/* //  <LoadScript
     //    googleMapsApiKey={TOKENS.googleMapsKey}>
     //     <GoogleMap
     //       mapContainerStyle={mapStyles}
     //       zoom={13}
     //       center={defaultCenter}
     //     />
-    //  </LoadScript>
+    //  </LoadScript> */}
+      <input class="btn btn-primary" type="reset" value="Reset Map"></input>
+    </>
   )
 }
 

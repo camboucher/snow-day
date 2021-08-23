@@ -3,6 +3,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SkiAreasContainer from './Components/SkiAreasContainer.js';
 import GoogleMapsComponent from './Components/GoogleMapsComponent.js';
+import NavBar from './Components/NavBar.js';
+import Pagination from './Components/Pagination.js';
 
 function App(props) {
 
@@ -18,9 +20,9 @@ function App(props) {
 
   return (
     <>
-      <h1>
-        Snow Day
-      </h1>
+    <div>
+      <NavBar/>
+    </div>
       <div class="container">
         <div class="row">
           <div class="col-sm">
@@ -31,6 +33,7 @@ function App(props) {
           </div>
         </div>
       </div>
+      <Pagination/>
     </>
   );
 }

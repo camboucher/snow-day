@@ -25,10 +25,13 @@ function deg2rad(deg) {
 const getSkiAreaData = (userLocation, count) => {
   return axios.get('http://localhost:3000/ski-area-data')
   .then((res) => {
-    for (var i = 0; i < count; i ++) {
+    for (var i = 0; i < res.data.length; i ++) {
       const { lat, long } = res.data[i]
       res.data[i].currentDistance = calcDistance(userLocation[0], userLocation[1], lat, long);
     }
+    res.data.sort((a, b) => {
+      return a.currentDistance - b.currentDistance
+    })
     return res.data.slice(0, count);
   })
   .catch((err) => console.log(err));

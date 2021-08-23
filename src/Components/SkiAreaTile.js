@@ -18,16 +18,28 @@ function SkiAreaTile(props) {
   // },[])
 
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">logo</div>
-        <strong class="col-sm">{name}</strong>
-        <em class="col-sm" style={{float: "right"}}>{`${Math.round(currentDistance)} mi.`}</em>
+  <div class="container">
+    <div class="row">
+      <strong class="col-sm" style={{float: "left"}}>{name}</strong>
+      <em class="col-sm" style={{float: "right"}}>{`${Math.round(currentDistance)} mi.`}</em>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <div class="row">
+          <a class="btn btn-primary btn-sm" style={{width: "40%", margin: "3px"}} role="button">Add to Map</a>
+        </div>
+        <div class="row">
+          <a class="btn btn-primary btn-sm" style={{width: "40%", margin: "3px"}} role="button">Trail Map</a>
+        </div>
+        <div class="row">
+          <a class="btn btn-primary btn-sm" style={{width: "40%", margin: "3px"}} role="button">Lift Lines</a>
+        </div>
       </div>
-      <div class="row">
+      <div class="col-sm">
         <WeatherWidget weatherData={weatherData}/>
       </div>
     </div>
+  </div>
   )
 }
 
