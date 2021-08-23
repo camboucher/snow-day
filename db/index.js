@@ -1,4 +1,4 @@
-cont pg = require('pg');
+const pg = require('pg');
 
 const { Pool, Client } = require('pg')
 
@@ -6,6 +6,7 @@ const pool = new Pool({
   user: 'camboucher',
   host: 'localhost',
   database: 'snowday',
+  password: 'password',
   port: 5432,
 });
 
