@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function SkiAreaContainer(props)  {
+function SkiAreasContainer(props)  {
 
   return (
     <div>
@@ -11,4 +11,4 @@ function SkiAreaContainer(props)  {
   )
 };
 
-export default SkiAreaContainer;
+export default SkiAreasContainer;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SkiAreaContainer from './Components/SkiAreaContainer.js'
+import SkiAreasContainer from './Components/SkiAreasContainer.js'
 
 function App(props) {
 
@@ -13,14 +13,14 @@ function App(props) {
     }, (err) => {
       console.log(`Unable to locate user's location`)
     });
-  });
+  },[]);
 
   return (
     <>
       <h1>
         Snow Day
       </h1>
-      <SkiAreaContainer userLocation={location}/>
+      <SkiAreasContainer userLocation={location}/>
     </>
   );
 }
