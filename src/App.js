@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SkiAreasContainer from './Components/SkiAreasContainer.js'
+import SkiAreasContainer from './Components/SkiAreasContainer.js';
+import GoogleMapsComponent from './Components/GoogleMapsComponent.js';
+
 
 function App(props) {
 
@@ -20,7 +22,16 @@ function App(props) {
       <h1>
         Snow Day
       </h1>
-      <SkiAreasContainer userLocation={location}/>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <SkiAreasContainer userLocation={location}/>
+          </div>
+          <div class="col-sm">
+            <GoogleMapsComponent userLocation={location}/>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
