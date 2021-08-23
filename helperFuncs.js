@@ -1,7 +1,10 @@
-
+const axios = require('axios');
+import TOKENS from './config.js';
 // calc distance between latitude and longitude points
 // currently calculated using km's
 // https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates
+
+const { openWeatherToken } = TOKENS;
 
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   var R = 6371; // Radius of the earth in km
@@ -20,3 +23,5 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 function deg2rad(deg) {
   return deg * (Math.PI/180)
 }
+
+axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely&appid=${openWeatherToken}`)

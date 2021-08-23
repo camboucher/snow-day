@@ -7,10 +7,9 @@ ReactDOM.render(<App />, document.getElementById("app"));
 /* steps
 
 set up react components
--- tiles for each mountain
--- weather widget
+
 -- maps modal window
--- nav bar / title
+
 
 database and schema setup
 -- ELT ski area data to postgres
@@ -22,6 +21,9 @@ formula for calculating distance
 add in sorting feature
 
 add in google maps API
+- Directions
+- Adding mountains
+- Weather layer overlay
 
 "favorite" mountains feature
 
