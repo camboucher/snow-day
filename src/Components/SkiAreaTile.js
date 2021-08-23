@@ -4,6 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import WeatherWidget from './WeatherWidget.js'
 
 function SkiAreaTile(props) {
+
+  const { id } = props;
+  const [skiAreaData, setSkiAreaData] = useState();
+  const [weatherData, setWeatherData] = useState();
+
   return (
     <div class="container">
       <div class="row">
@@ -12,7 +17,7 @@ function SkiAreaTile(props) {
         <em class="col-sm" style={{float: "rigth"}}>XX miles away</em>
       </div>
       <div class="row">
-        <WeatherWidget/>
+        <WeatherWidget weatherData={weatherData}/>
       </div>
     </div>
   )

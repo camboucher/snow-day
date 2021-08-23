@@ -17,11 +17,17 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
     ;
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
   var d = R * c; // Distance in km
-  return d;
+  return d * .621371;
 }
 
 function deg2rad(deg) {
   return deg * (Math.PI/180)
 }
 
-axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely&appid=${openWeatherToken}`)
+// get weather for
+const getWeather = (lat, lon) => {
+  axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=${openWeatherToken}`)
+  .then((res) => {
+    setState
+  })
+}

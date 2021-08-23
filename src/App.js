@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SkiAreasContainer from './Components/SkiAreasContainer.js';
 import GoogleMapsComponent from './Components/GoogleMapsComponent.js';
 
-
 function App(props) {
 
   const [location, setLocation] = useState([0,0]);

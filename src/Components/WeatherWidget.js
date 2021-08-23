@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function WeatherWidget(props) {
 
+
+
   return (
     <>
-
     </>
   )
 }
