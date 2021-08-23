@@ -3,14 +3,14 @@ import React from 'react';
 function SortButton(props) {
   return (
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Sort by
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort by
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item">Closest</a>
-        <a class="dropdown-item">Most Snow</a>
-        <a class="dropdown-item">Recent Snow</a>
-      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Distance</a></li>
+        <li><a class="dropdown-item" href="#">Forecasted Snow</a></li>
+        <li><a class="dropdown-item" href="#">Recent Snow</a></li>
+      </ul>
     </div>
   )
 }

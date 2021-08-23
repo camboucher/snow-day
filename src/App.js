@@ -6,7 +6,7 @@ import GoogleMapsComponent from './Components/GoogleMapsComponent.js';
 
 function App(props) {
 
-  const [location, setLocation] = useState([0,0]);
+  const [location, setLocation] = useState([40.7273472, -73.9966976]);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
