@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SkiAreaContainer from './Components/SkiAreaContainer.js'
 
 function App(props) {
 
   const [location, setLocation] = useState([0,0]);
 
-  const locationSuccess = (position) => {
-    setLocation[position.coords.latitude, position.coords.longitude]
-  }
-
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(locationSuccess, (err) => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setLocation([position.coords.latitude, position.coords.longitude])
+    }, (err) => {
       console.log(`Unable to locate user's location`)
     });
   });
@@ -19,11 +18,9 @@ function App(props) {
   return (
     <>
       <h1>
-        Hello
+        Snow Day
       </h1>
-      <button type="button" class="btn btn-primary">
-        This is a bootstrap button
-      </button>
+      <SkiAreaContainer userLocation={location}/>
     </>
   );
 }
