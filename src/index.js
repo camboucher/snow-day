@@ -9,16 +9,19 @@ ReactDOM.render(<App />, document.getElementById("app"));
 
 set up react components
 
--- maps modal window
+-- trail map modal window
+-- adding mountains on map
+-- weather features
+-- deploy
+-- presentation
+
+FUTURE POTENTIAL FEATURES / FUNCTIONALITY
 
 add in sorting feature
 
 google maps interaction
 - Directions
-- Adding mountains
 - Weather layer overlay
-
-DEPLOYMENT
 
 "favorite" mountains feature
 

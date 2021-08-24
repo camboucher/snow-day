@@ -24,7 +24,7 @@ function deg2rad(deg) {
 const coords = [42.201817, -74.22167, 40.7273472, -73.9966976];
 
 // const getWeatherData = (lat, lon) => {
-//   axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=6ecec238071e6d0ca0148e6c11c8f47c`)
+//   axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid`)
 //   .then((res) => console.log(res))
 //   .catch((err) => console.log(err))
 // };
