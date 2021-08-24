@@ -4,14 +4,12 @@ import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById("app"));
 
+
 /* steps
 
 set up react components
 
 -- maps modal window
--- weather widget
-
-weather data logic
 
 add in sorting feature
 
@@ -27,7 +25,7 @@ DEPLOYMENT
 very cool potential features
   - server side rendering
   - cache for storing weather data
-  - map weather overlay 
+  - map weather overlay
   - search mountains
   - cookies for storing
     - user's location

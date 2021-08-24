@@ -7,7 +7,7 @@ import { getWeatherData } from '../../helperFuncs.js';
 
 function SkiAreaTile(props) {
 
-  const { id } = props;
+  const { id, addToMap, mappedSkiAreas } = props;
   const [weatherData, setWeatherData] = useState({
     "lat": 40.7273,
     "lon": -73.9967,
@@ -38,6 +38,123 @@ function SkiAreaTile(props) {
       ]
     },
     "daily": [
+      {
+        "dt": 1629907200,
+        "sunrise": 1629886592,
+        "sunset": 1629934794,
+        "moonrise": 1629941700,
+        "moonset": 1629897720,
+        "moon_phase": 0.61,
+        "temp": {
+          "day": 86.16,
+          "min": 75.58,
+          "max": 92.5,
+          "night": 82.9,
+          "eve": 90.9,
+          "morn": 75.58
+        },
+        "feels_like": {
+          "day": 88.12,
+          "night": 84.52,
+          "eve": 90.36,
+          "morn": 76.32
+        },
+        "pressure": 1020,
+        "humidity": 50,
+        "dew_point": 65.35,
+        "wind_speed": 6.96,
+        "wind_deg": 335,
+        "wind_gust": 14.85,
+        "weather": [
+          {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+          }
+        ],
+        "clouds": 1,
+        "pop": 0,
+        "uvi": 7.7
+      },
+      {
+        "dt": 1629907200,
+        "sunrise": 1629886592,
+        "sunset": 1629934794,
+        "moonrise": 1629941700,
+        "moonset": 1629897720,
+        "moon_phase": 0.61,
+        "temp": {
+          "day": 86.16,
+          "min": 75.58,
+          "max": 92.5,
+          "night": 82.9,
+          "eve": 90.9,
+          "morn": 75.58
+        },
+        "feels_like": {
+          "day": 88.12,
+          "night": 84.52,
+          "eve": 90.36,
+          "morn": 76.32
+        },
+        "pressure": 1020,
+        "humidity": 50,
+        "dew_point": 65.35,
+        "wind_speed": 6.96,
+        "wind_deg": 335,
+        "wind_gust": 14.85,
+        "weather": [
+          {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+          }
+        ],
+        "clouds": 1,
+        "pop": 0,
+        "uvi": 7.7
+      },
+      {
+        "dt": 1629907200,
+        "sunrise": 1629886592,
+        "sunset": 1629934794,
+        "moonrise": 1629941700,
+        "moonset": 1629897720,
+        "moon_phase": 0.61,
+        "temp": {
+          "day": 86.16,
+          "min": 75.58,
+          "max": 92.5,
+          "night": 82.9,
+          "eve": 90.9,
+          "morn": 75.58
+        },
+        "feels_like": {
+          "day": 88.12,
+          "night": 84.52,
+          "eve": 90.36,
+          "morn": 76.32
+        },
+        "pressure": 1020,
+        "humidity": 50,
+        "dew_point": 65.35,
+        "wind_speed": 6.96,
+        "wind_deg": 335,
+        "wind_gust": 14.85,
+        "weather": [
+          {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+          }
+        ],
+        "clouds": 1,
+        "pop": 0,
+        "uvi": 7.7
+      },
       {
         "dt": 1629907200,
         "sunrise": 1629886592,
@@ -130,17 +247,20 @@ function SkiAreaTile(props) {
   return (
     <div class="container">
       <div class="row">
-        <strong class="col-sm" style={{float: "left"}}>{name}</strong>
-        <em class="col-sm" style={{float: "right"}}>{`${Math.round(currentDistance)} mi.`}</em>
-      </div>
-      <div class="row">
         <div class="col-sm">
-          <WeatherWidget weatherData={weatherData} name={name} currentDistance={currentDistance}/>
+          {/* <WeatherWidget weatherData={weatherData} name={name} currentDistance={currentDistance}/> */}
         </div>
       </div>
       <div class="row">
         <div class="col-sm">
-          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button">Add to Map</a>
+          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button" onClick={
+            addToMap({
+              location: {
+                lat: lat,
+                lng: long,
+              },
+              name: name
+            })}>Add to Map</a>
         </div>
         <div class="col-sm">
           <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button">Trail Map</a>

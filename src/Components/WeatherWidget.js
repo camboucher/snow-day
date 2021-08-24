@@ -1,11 +1,13 @@
 import React, { useState, useEffect} from 'react';
 import '../../style.css';
+import WeatherForecast from './WeatherForecast.js'
 
 function WeatherWidget(props) {
   const { current, daily } = props.weatherData;
   const { name, currentDistance } = props
 
   return (
+    <>
     <div class="container" id="wrapper">
       <div class="container-fluid" id="current-weather">
         <div class="row">
@@ -49,6 +51,15 @@ function WeatherWidget(props) {
     </div>
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row" style={{padding: "2px"}}>
+      {[1, 2, 3, 4].map((day) => {
+        return <WeatherForecast weatherData={daily[day]} forecastDay={day}/>
+      })}
+    </div>
+  </div>
+</>
   )
 }
 
