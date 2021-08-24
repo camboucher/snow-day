@@ -12,7 +12,7 @@ function SkiAreasContainer(props)  {
   const [sortOption, setSortOption] = useState('closest');
   const [skiAreas, setSkiAreas] = useState([]);
   const [count, setCount] = useState(2);
-  const [mappedSkiAreas, setMappedSkiAreas] = useState([{location:{lat:41.058804,lng:-74.19601},name:"Campgaw Mountain"}]);
+  const [mappedSkiAreas, setMappedSkiAreas] = useState([]);
   const { userLocation } = props;
 
   const addToMap = (skiArea) => {
@@ -38,7 +38,7 @@ function SkiAreasContainer(props)  {
           </div>
         </div>
         <div class="col-lg">
-          <GoogleMapsComponent userLocation={userLocation} mappedSkiAreas={mappedSkiAreas}/>
+          {/* <GoogleMapsComponent userLocation={userLocation} mappedSkiAreas={mappedSkiAreas}/> */}
         </div>
       </div>
     </div>

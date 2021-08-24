@@ -23,11 +23,19 @@ function deg2rad(deg) {
 
 const coords = [42.201817, -74.22167, 40.7273472, -73.9966976];
 
-const getWeatherData = (lat, lon) => {
-  axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=6ecec238071e6d0ca0148e6c11c8f47c`)
-  .then((res) => console.log(res))
+// const getWeatherData = (lat, lon) => {
+//   axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=6ecec238071e6d0ca0148e6c11c8f47c`)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err))
+// };
+
+// getWeatherData(coords[0], coords[1])
+const getSkiMaps = (skiAreaId) => {
+  axios.get(`https://skimap.org/SkiAreas/view/${skiAreaId}.json`)
+  .then((res) => {
+    // console.log(res.data)
+    return res.data.ski_maps[0].media.image.url
+  })
   .catch((err) => console.log(err))
 };
-
-getWeatherData(coords[0], coords[1])
-
+getSkiMaps(315);

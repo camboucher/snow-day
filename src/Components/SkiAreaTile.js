@@ -1,13 +1,14 @@
 import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import WeatherWidget from './WeatherWidget.js';
 import WeatherForecast from './WeatherForecast.js';
-import { getWeatherData } from '../../helperFuncs.js';
+import { getWeatherData, getTrailMap } from '../../helperFuncs.js';
 
 function SkiAreaTile(props) {
 
-  const { id, addToMap, mappedSkiAreas } = props;
+  const { addToMap, mappedSkiAreas } = props;
+  const { id, lat, long, name, website, currentDistance } = props.areaData;
   const [weatherData, setWeatherData] = useState({
     "lat": 40.7273,
     "lon": -73.9967,
@@ -235,8 +236,22 @@ function SkiAreaTile(props) {
       },
     ]
   });
-  const { lat, long, name, website, currentDistance } = props.areaData;
 
+  const handleAddToMap = (e) => {
+    e.preventDefault();
+    // if (JSON.stringify(mappedSkiAreas).indexOf(JSON.stringify({
+    //   location: {
+    //   lat: lat,
+    //   lng: long,
+    // },
+    // name: name})) !== -1) {
+      addToMap({
+      location: {
+        lat: lat,
+        lng: long,
+      },
+      name: name
+  })}
   // useEffect(() => {
   //   return getWeatherData(lat, long)
   //   .then((res) => {
@@ -253,17 +268,12 @@ function SkiAreaTile(props) {
       </div>
       <div class="row">
         <div class="col-sm">
-          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button" onClick={
-            addToMap({
-              location: {
-                lat: lat,
-                lng: long,
-              },
-              name: name
-            })}>Add to Map</a>
+          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button" onClick={handleAddToMap}>Add to Map</a>
         </div>
         <div class="col-sm">
-          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button">Trail Map</a>
+          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button" onClick={(e) => {
+            e.preventDefault();
+            getTrailMap(id);}}>Trail Map</a>
         </div>
         <div class="col-sm">
           <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button">Lift Lines</a>

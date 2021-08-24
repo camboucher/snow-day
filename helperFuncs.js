@@ -23,6 +23,7 @@ function deg2rad(deg) {
 }
 
 const getSkiAreaData = (userLocation, count) => {
+
   return axios.get('http://localhost:3000/ski-area-data')
   .then((res) => {
     for (var i = 0; i < res.data.length; i ++) {
@@ -39,7 +40,17 @@ const getSkiAreaData = (userLocation, count) => {
 
 const getWeatherData = (lat, lon) => {
   return axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${openWeatherToken}`)
-}
+};
 
-export { getSkiAreaData, getWeatherData };
+const getTrailMap = (skiAreaId) => {
+  axios.get(`http://localhost:3000/ski-map?id=${skiAreaId}`, {
+    headers: {
+      "Accept": "*/*"
+    }
+  })
+  .then((res) => console.log(res))
+  .catch((err) => console.log('No trail maps available for this mountain'))
+};
+
+export { getSkiAreaData, getWeatherData, getTrailMap };
 
