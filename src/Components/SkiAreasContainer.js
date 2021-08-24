@@ -9,7 +9,7 @@ import { getSkiAreaData } from '../../helperFuncs.js';
 function SkiAreasContainer(props)  {
   const [sortOption, setSortOption] = useState('closest');
   const [skiAreas, setSkiAreas] = useState([]);
-  const [count, setCount] = useState(8);
+  const [count, setCount] = useState(2);
   const { userLocation } = props;
 
   useEffect(() => {

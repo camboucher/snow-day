@@ -38,7 +38,7 @@ const getSkiAreaData = (userLocation, count) => {
 };
 
 const getWeatherData = (lat, lon) => {
-  return axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=${openWeatherToken}`)
+  return axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${openWeatherToken}`)
 }
 
 export { getSkiAreaData, getWeatherData };

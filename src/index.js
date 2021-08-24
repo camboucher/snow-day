@@ -9,31 +9,29 @@ ReactDOM.render(<App />, document.getElementById("app"));
 set up react components
 
 -- maps modal window
+-- weather widget
 
-
-database and schema setup
--- ELT ski area data to postgres
-
-write calls and data logic for weather apis
-
-formula for calculating distance
+weather data logic
 
 add in sorting feature
 
-add in google maps API
+google maps interaction
 - Directions
 - Adding mountains
 - Weather layer overlay
 
+DEPLOYMENT
+
 "favorite" mountains feature
 
-very cool additional features
-  - server side rendering on initial
+very cool potential features
+  - server side rendering
   - cache for storing weather data
+  - map weather overlay 
+  - search mountains
   - cookies for storing
     - user's location
     - favorite mountains
     - sorting
-
 */
 
