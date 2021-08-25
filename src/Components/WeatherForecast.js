@@ -18,7 +18,7 @@ function WeatherForecast(props) {
         <div class="row">
             <p><span class="prob-precipitation" id="forecast-day-1-ht">Precip: {Math.round(weatherData.pop * 100)}%
              {weatherData.snow ? ' ' + Math.round(weatherData.snow) :
-                weatherData.rain ? ' ' + Math.round(weatherData.rain) : 0} in.</span></p>
+                weatherData.rain ? ' ' + Math.round(weatherData.rain) : '' + 0} in.</span></p>
         </div>
       </div>
   )
