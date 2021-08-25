@@ -16,7 +16,7 @@ app.use(cors());
 
 // routes
 app.get('/ski-area-data', (req, res) => {
-  db.query(`SELECT * from "ski-areas";`)
+  db.query(`SELECT * from "ski-areas" WHERE relevance = 1;`)
   .then((data) => {
     res.send(data.rows);
   })
