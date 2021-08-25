@@ -10,7 +10,8 @@ import { getSkiAreaData } from '../../helperFuncs.js';
 function SkiAreasContainer(props)  {
   const [sortOption, setSortOption] = useState('closest');
   const [skiAreas, setSkiAreas] = useState([]);
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(6);
+  const [page, changePage] = useState(1);
   const [mappedSkiAreas, setMappedSkiAreas] = useState([{ location: {lat: 42.201815408497,
   lng: -74.221671060458}, name: "Hunter Mountain"}]);
   const { userLocation } = props;

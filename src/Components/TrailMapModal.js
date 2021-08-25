@@ -16,13 +16,8 @@ function TrailMapModal (props) {
       <Button variant="primary" onClick={handleShow}>
         View Trail Map
       </Button>
-
       <Modal show={show} onHide={handleClose}>
-
-        <Modal.Body>
-          <img src="https://skimap.org/data/315/3535/1618775636jpg_render.jpg"></img>
-        </Modal.Body>
-
+          <img style={{width: "100%"}} src="https://skimap.org/data/315/3535/1618775636jpg_render.jpg"></img>
       </Modal>
     </>
   );

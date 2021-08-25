@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import 'bootstrap';
+import { Button } from 'react-bootstrap';
 import WeatherWidget from './WeatherWidget.js';
 import WeatherForecast from './WeatherForecast.js';
 import TrailMapModal from './TrailMapModal.js';
@@ -237,6 +238,7 @@ function SkiAreaTile(props) {
       },
     ]
   });
+  // const [pastPrecipitatin, setPastPrecipitation] = useState([]);
 
   const handleAddToMap = (e) => {
     e.preventDefault();
@@ -247,32 +249,38 @@ function SkiAreaTile(props) {
       },
       name: name
   })}
-  // useEffect(() => {
-  //   return getWeatherData(lat, long)
-  //   .then((res) => {
-  //     setWeatherData(res.data);
-  //   })
-  // },[])
+
+  useEffect(() => {
+    return getWeatherData(lat, long)
+    .then((res) => {
+      setWeatherData(res.data);
+      return
+    })
+  },[])
 
   return (
-    <div class="container">
+    <>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm">
-          {/* <WeatherWidget weatherData={weatherData} name={name} currentDistance={currentDistance}/> */}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button" onClick={handleAddToMap}>Add to Map</a>
-        </div>
-        <div class="col-sm">
-          <TrailMapModal/>
-        </div>
-        <div class="col-sm">
-          <a class="btn btn-primary btn-sm" style={{margin: "3px"}} role="button">Lift Lines</a>
+        <div class="col-lg">
+          <WeatherWidget weatherData={weatherData} name={name} currentDistance={currentDistance}/>
         </div>
       </div>
     </div>
+    <div class="container-fluid justify-content-center">
+      <div class="row">
+        <div class="col-lg justify-space-around">
+          <Button>Lift Lines</Button>
+        </div>
+        <div class="col-lg justify-space-around">
+          <TrailMapModal/>
+        </div>
+        <div class="col-lg justify-space-around" float="right">
+          <Button onClick={handleAddToMap}>Add to Map</Button>
+        </div>
+      </div>
+    </div>
+    </>
   )
 }
 

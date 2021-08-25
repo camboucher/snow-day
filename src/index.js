@@ -7,11 +7,6 @@ ReactDOM.render(<App />, document.getElementById("app"));
 
 /* steps
 
-set up react components
-
--- format modal
-
--- weather features
 -- deploy
 -- presentation
 
