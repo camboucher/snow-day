@@ -24,7 +24,7 @@ function deg2rad(deg) {
 
 const getSkiAreaData = (userLocation, count) => {
 
-  return axios.get(`${url}:8080/ski-area-data`)
+  return axios.get(`/ski-area-data`)
   .then((res) => {
     for (var i = 0; i < res.data.length; i ++) {
       const { lat, long } = res.data[i]
@@ -43,7 +43,7 @@ const getWeatherData = (lat, lon) => {
 };
 
 const getTrailMap = (skiAreaId) => {
-  axios.get(`${url}:8080/ski-map?id=${skiAreaId}`, {
+  axios.get(`/ski-map?id=${skiAreaId}`, {
     headers: {
       "Accept": "*/*"
     }

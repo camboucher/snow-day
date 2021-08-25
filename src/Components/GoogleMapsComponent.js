@@ -14,8 +14,6 @@ function GoogleMapsComponent(props) {
     lat: userLocation[0], lng: userLocation[1]
   }
 
-  useEffect(()=>{}, [mappedSkiAreas]);
-
   return (
     <>
       <LoadScript
