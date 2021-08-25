@@ -4,16 +4,15 @@ const db = require('../db');
 const cors = require('cors');
 const axios = require('axios');
 
-
 const app = express();
 const port = 6969;
 
-app.use(express.static('/home/ubuntu/snowDay/dist/index.html'));
+app.use(express.static(path.join(__dirname,'../dist')));
 app.use(cors());
 
-app.get('/',(req, res) => {
-  res.send('poo');
-})
+// app.get('/',(req, res) => {
+//   res.send('poo');
+// })
 
 // routes
 app.get('/ski-area-data', (req, res) => {

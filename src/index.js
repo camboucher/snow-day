@@ -8,6 +8,8 @@ ReactDOM.render(<App />, document.getElementById("app"));
 /* steps
 
 -- deploy
+  - transfer database
+  - environmental variables (API Tokens)
 -- presentation
 
 FUTURE POTENTIAL FEATURES / FUNCTIONALITY
