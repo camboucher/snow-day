@@ -14,13 +14,10 @@ function GoogleMapsComponent(props) {
     lat: userLocation[0], lng: userLocation[1]
   }
 
-  useEffect(()=>{
-    setRerender(!rerender);
-    }, [mappedSkiAreas]);
+  useEffect(()=>{}, [mappedSkiAreas]);
 
   return (
     <>
-      {/* <div>Replace this with commented out text later. Placeholder to save API calls</div> */}
       <LoadScript
        googleMapsApiKey={TOKENS.googleMapsKey}>
         <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={defaultCenter}>
