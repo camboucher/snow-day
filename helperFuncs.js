@@ -1,5 +1,5 @@
 const axios = require('axios');
-import TOKENS from './config.js';
+import { TOKENS, url } from './config.js';
 
 const { openWeatherToken } = TOKENS;
 
@@ -24,7 +24,7 @@ function deg2rad(deg) {
 
 const getSkiAreaData = (userLocation, count) => {
 
-  return axios.get('http://localhost:3000/ski-area-data')
+  return axios.get(`${url}:6969/ski-area-data`)
   .then((res) => {
     for (var i = 0; i < res.data.length; i ++) {
       const { lat, long } = res.data[i]
@@ -43,7 +43,7 @@ const getWeatherData = (lat, lon) => {
 };
 
 const getTrailMap = (skiAreaId) => {
-  axios.get(`http://localhost:3000/ski-map?id=${skiAreaId}`, {
+  axios.get(`${url}:6969/ski-map?id=${skiAreaId}`, {
     headers: {
       "Accept": "*/*"
     }

@@ -36,10 +36,11 @@ function WeatherWidget(props) {
       {/* <!-- Right panel --> */}
       <div class="col-xs-12 col-sm-12 col-md-3 row" id="leftpanel">
         <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-          <h6>Current Prec: <span id="humidity"></span>{Math.round(current.rain ? current.snow : 0)}in</h6>
+          <h6>Current Prec: <span id="humidity"></span>{Math.round(current.snow ?
+            Math.round(current.snow) : current.rain ? Math.round(current.rain) : 0)}in</h6>
         </div>
         <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-          <h6>Past 48hr Prec: <span id="wind"></span>{Math.round(current.wind_speed)}in.</h6>
+          <h6>Past 48hr: <span id="wind"></span>{Math.round(current.wind_speed)}in.</h6>
         </div>
         <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
           <h6>Wind: <span id="wind"></span>{Math.round(current.wind_speed)} mph</h6>

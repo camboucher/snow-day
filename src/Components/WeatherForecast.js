@@ -16,15 +16,10 @@ function WeatherForecast(props) {
           </div>
         </div>
         <div class="row">
-          <div class="col-md forecast-min-low">
-            <p><span class="prob-precipitation" id="forecast-day-1-ht">{weatherData.pop * 100}%</span></p>
-          </div>
-          <div class="col-md forecast-min-low">
-            <p><span class="precip-amount" id="forecast-day-1-lt">{
-              weatherData.snow ? Math.round(weatherData.snow) :
-                weatherData.rain ? Math.round(weatherData.rain) : 0} in</span></p>
-          </div>
-      </div>
+            <p><span class="prob-precipitation" id="forecast-day-1-ht">Precip: {weatherData.pop * 100}%
+             {weatherData.snow ? ' ' + Math.round(weatherData.snow) :
+                weatherData.rain ? ' ' + Math.round(weatherData.rain) : 0} in.</span></p>
+        </div>
       </div>
   )
 }

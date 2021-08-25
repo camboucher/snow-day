@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import TOKENS from '../../config.js';
+import { TOKENS } from '../../config.js';
 
 function GoogleMapsComponent(props) {
   const [rerender, setRerender] = useState(false);
