@@ -10,7 +10,7 @@ ReactDOM.render(<App />, document.getElementById("app"));
 set up react components
 
 -- format modal
--- adding mountains on map
+
 -- weather features
 -- deploy
 -- presentation

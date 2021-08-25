@@ -3,7 +3,7 @@ import bootstrap from 'bootstrap';
 
 function Pagination(props) {
   return (
-    <nav aria-label="...">
+    <nav aria-label="..." style={{margin: "5px"}}>
       <ul class="pagination">
       <li class="page-item disabled">
         <a class="page-link" href="#" tabindex="-1">Previous</a>
