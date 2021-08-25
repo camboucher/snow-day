@@ -23,5 +23,3 @@ axios.get('https://skimap.org/SkiAreas/index.json')
   console.log(err)
 })
 
-}
-
