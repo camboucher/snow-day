@@ -7,7 +7,7 @@ const axios = require('axios');
 const app = express();
 const port = 6969;
 
-app.use(express.static(path.join(__dirname,'../dist')));
+app.use(express.static('test'));
 app.use(cors());
 
 // routes
