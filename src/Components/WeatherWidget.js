@@ -45,9 +45,9 @@ function WeatherWidget(props) {
         <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
           <h6>Wind: <span id="wind"></span>{Math.round(current.wind_speed)} mph</h6>
         </div>
-        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+        {/* <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
           <h6>Visibility: <span id="mainTempLow"></span>{(current.visibility * 3.3).toLocaleString()}ft</h6>
-        </div>
+        </div> */}
       </div>
     </div>
     </div>

@@ -7,26 +7,16 @@ ReactDOM.render(<App />, document.getElementById("app"));
 
 /* steps
 
--- deploy
-  - transfer database
-  - environmental variables (API Tokens)
--- presentation
 
 FUTURE POTENTIAL FEATURES / FUNCTIONALITY
 
-add in sorting feature
-
-google maps interaction
-- Directions
-- Weather layer overlay
-
-"favorite" mountains feature
-
 very cool potential features
-  - server side rendering
+  - server side rendering on initial load
   - cache for storing weather data
-  - map weather overlay
   - search mountains
+  - google maps interaction
+    - Directions
+    - Weather layer overlay
   - cookies for storing
     - user's location
     - favorite mountains

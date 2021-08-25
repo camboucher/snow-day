@@ -4,6 +4,7 @@ import { TOKENS } from '../../config.js';
 
 function GoogleMapsComponent(props) {
   const [rerender, setRerender] = useState(false);
+  const [zoom, setZoom] = useState(13)
 
   const { userLocation, mappedSkiAreas } = props;
   const mapStyles = {
@@ -18,7 +19,7 @@ function GoogleMapsComponent(props) {
     <>
       <LoadScript
        googleMapsApiKey={TOKENS.googleMapsKey}>
-        <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={defaultCenter}>
+        <GoogleMap mapContainerStyle={mapStyles} zoom={zoom} center={defaultCenter}>
           {mappedSkiAreas.map((area) => {
             return <Marker title={area.name} position={area.location}/>
           })}
