@@ -1,13 +1,16 @@
+import { DB_CONFIG } from '../config.js';
+
+const {user, host, database, password, port } = DB_CONFIG
 const pg = require('pg');
 
 const { Pool, Client } = require('pg');
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'ec2-3-134-86-209.us-east-2.compute.amazonaws.com',
-  database: 'snowday',
-  password: 'password',
-  port: 5432,
+  user,
+  host,
+  database,
+  password,
+  port,
 });
 
 pool.connect();
